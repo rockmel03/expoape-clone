@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+
+@font-face {
+  font-family: 'TWKLausanne';
+  src: url(/fonts/TWKLausanne-300.b6399e7.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'TWKLausanne';
+  src: url(/fonts/TWKLausanne-400.c74d82a.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'TWKLausanne';
+  src: url(/fonts/TWKLausanne-500.eb0ea77.woff2);
+  font-weight: 400;
+}
