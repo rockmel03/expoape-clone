@@ -4,15 +4,15 @@ const News = () => {
   return (
     <section>
       <div className="w-full max-w-screen-2xl mx-auto min-h-screen pb-20 sm:pt-10 bg-white text-black">
-        <div className="relative w-full min-h-[65vh] flex items-center justify-center">
-          <div className="w-[35%] aspect-[9/16] bg-red-500 "></div>
-          <div className="w-[35%] aspect-video bg-red-400 absolute z-[2] top-[40%] left-[3%] "></div>
-          <div className="w-[20%] aspect-[4/5] bg-red-300 absolute z-[2] top-[30%] right-[15%] "></div>
-          <div className="w-[30%] aspect-[7/6] bg-red-200 absolute z-[2] bottom-[10%] left-0 "></div>
-          <div className="w-[30%] aspect-[4/5] bg-red-600 absolute z-[2] bottom-[5%] right-0 "></div>
+        <div className="relative w-full min-h-[65vh] lg:min-h-screen   flex items-center justify-center">
+          <div className="w-[35%] lg:w-[25%] aspect-[9/16] bg-red-500 "></div>
+          <div className="w-[35%] lg:w-[25%] aspect-video bg-red-400 absolute z-[2] top-[40%] left-[3%] lg:top-[20%] lg:left-[15%]"></div>
+          <div className="w-[20%] lg:w-[10%] aspect-[4/5] bg-red-300 absolute z-[2] top-[30%] right-[15%]  lg:top-[15%] lg:right-[30%]"></div>
+          <div className="w-[30%] lg:w-[25%] aspect-[7/6] bg-red-200 absolute z-[2] bottom-[10%] left-0 lg:bottom-[-15%] lg:left-[5%]"></div>
+          <div className="w-[30%] lg:w-[20%] aspect-[4/5] bg-red-600 absolute z-[2] bottom-[5%] right-0  lg:bottom-[-15%] lg:right-[5%]"></div>
         </div>
         <div className="__text text-center px-10 ">
-          <h2 className="text-sm flex gap-2 items-center justify-center mt-5">
+          <h2 className="text-sm lg:text-xl flex gap-2 items-center justify-center mt-5">
             <div className="w-[1em]">
               <svg
                 viewBox="0 0 12 12"
@@ -28,17 +28,18 @@ const News = () => {
             </div>
             <span className="opacity-80">Work in motion</span>
           </h2>
-          <h1 className="text-6xl font-light my-10">
+          <h1 className="text-6xl lg:text-[8rem] font-light my-10">
             <div>Spread</div>
             <div>the News</div>
           </h1>
-          <p className="leading-1 text-base font-light opacity-80 my-5 ">
+          <p className="leading-1 text-base lg:text-xl lg:w-[40%] mx-auto font-light opacity-80 my-5 ">
             Highlights of cases that we passionately built with forward-thinking
             clients and friends over the years.
           </p>
-          <div className=" text-sm border-b border-black w-fit mx-auto opacity-80">
-            Browse all news
-          </div>
+          <div className=" text-sm sm:text-lg w-fit sm:w-full mx-auto flex items-center justify-center gap-2 sm:justify-end ">
+          <div className="w-[1em] h-[1em] border border-zinc-500 rounded-full"></div>
+          <div className="border-b border-zinc-500 "> Browse all work</div>
+        </div>
         </div>
       </div>
     </section>

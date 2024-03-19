@@ -37,40 +37,52 @@ const Work = () => {
   ]);
 
   return (
-    <section className="bg-white text-black min-h-screen py-20 px-6">
+    <section className="bg-white text-black min-h-screen py-20 px-6 md:px-[10vw]">
       <div className=" max-w-screen-2xl mx-auto ">
-        <div className="Work__text">
-          <h2 className="text-sm flex gap-2 items-center capitalize">
-            <div className="w-[1em]">
-              <svg
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon"
-              >
-                <path
-                  d="M7.41908 4.56679L6.13722 0L4.85418 4.92566L0 6L4.85418 7.25435L6.13722 12L7.3276 7.25435L12 6L7.41908 4.56679Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <span className="opacity-80">featured project</span>
-          </h2>
-          <h1 className="capitalize font-light text-[3.5rem] leading-none my-5">
+        <div className="Work__text sm:flex w-full gap-1">
+          <h1 className="capitalize font-light sm:text-[8rem] md:text-[10rem] lg:text-[12rem] 2xl:text-[16rem] basis-4/5 hidden sm:block leading-none my-5 mx-[5vw]">
             Work
           </h1>
-          <p className="leading-1 text-base font-light opacity-80">
-            Highlights of cases that we passionately built with forward-thinking
-            clients and friends over the years.
-          </p>
+          <div className="basis-2/5 sm:flex sm:flex-col gap-3 justify-center sm:translate-y-[70%]">
+            <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl flex gap-2 items-center capitalize">
+              <div className="w-[1em]">
+                <svg
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon"
+                >
+                  <path
+                    d="M7.41908 4.56679L6.13722 0L4.85418 4.92566L0 6L4.85418 7.25435L6.13722 12L7.3276 7.25435L12 6L7.41908 4.56679Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <span className="opacity-80">featured project</span>
+            </h2>
+            <h2 className="capitalize font-light text-[3.5rem] sm:hidden leading-none my-5">
+              Work
+            </h2>
+            <p className="leading-1 text-base sm:text-lg mf:text-xl lg:text-2xl font-light opacity-80">
+              Highlights of cases that we passionately built with
+              forward-thinking clients and friends over the years.
+            </p>
+          </div>
         </div>
 
         {/* projects */}
-        <div className="my-5 flex flex-col gap-5">
+        <div className="my-5 flex flex-col gap-5 sm:grid sm:grid-cols-12 sm:gap-y-[11vw]">
           {projects.map((item, idx) => (
-            <a key={idx} href="/">
-              <div>
-                <div className="relative w-full aspect-[3/4] overflow-hidden bg-zinc-100">
+            <div
+              key={idx}
+              className={`group sm:self-end ${
+                idx === 0 && "col-start-2 col-end-8"
+              } ${idx === 1 && "col-start-9 col-end-13"} ${
+                idx === 2 && "col-start-2 col-end-5"
+              } ${idx === 3 && "col-start-6 col-end-11"}`}
+            >
+              <a href="/">
+                <div className="relative w-full aspect-[3/4] sm:aspect-[8/9] overflow-hidden bg-zinc-100 ">
                   <video
                     src={item.video}
                     className="absolute top-0 left-0 w-full h-full object-cover object-center"
@@ -82,7 +94,7 @@ const Work = () => {
                   <img
                     src={item.image}
                     alt=""
-                    className="absolute top-0 left-0 w-full h-full object-cover object-center hidden sm:block sm:hover:hidden duration-300"
+                    className="absolute top-0 left-0 w-full h-full object-cover object-center hidden sm:block group-hover:hidden duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -90,13 +102,14 @@ const Work = () => {
                   <strong>{item.heading}</strong>
                   <span className="opacity-80">{item.subheading}</span>
                 </p>
-              </div>
-            </a>
+              </a>
+            </div>
           ))}
         </div>
 
-        <div className=" text-sm border-b border-black w-fit mx-auto">
-          Browse all work
+        <div className=" text-sm sm:text-lg w-fit sm:w-full mx-auto flex items-center justify-center gap-2 sm:justify-end ">
+          <div className="w-[1em] h-[1em] border border-zinc-500 rounded-full"></div>
+          <div className="border-b border-zinc-500 "> Browse all work</div>
         </div>
       </div>
     </section>

@@ -3,8 +3,8 @@ import React from "react";
 const PlayReel = () => {
   return (
     <section className="bg-black text-white w-full">
-      <div className="relative w-full max-w-screen-2xl h-screen mx-auto flex flex-col items-center justify-between py-[10vh]">
-        <h2 className="text-sm flex gap-2 items-center">
+      <div className="relative w-full max-w-screen-2xl h-screen mx-auto flex flex-col items-center justify-between py-[10vh] lg:py-10">
+        <h2 className="text-sm lg:text-lg flex gap-2 items-center">
           <div className="w-[1em]">
             <svg
               viewBox="0 0 12 12"
@@ -20,16 +20,16 @@ const PlayReel = () => {
           </div>
           <span className="opacity-80">Work in motion</span>
         </h2>
-        <div className=" w-32 aspect-video absolute z-[10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-zinc-500/20">
+        <div className=" w-32 lg:w-80 aspect-video absolute z-[10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-zinc-500/20">
           <img
             src=""
             alt=""
             className="w-full h-full object-cover origin-center"
           />
         </div>
-        <h1 className="relative z-20 text-5xl flex gap-1 items-center justify-center">
+        <h1 className="relative z-20 font-light text-5xl lg:text-[10rem] flex gap-1 items-center justify-center">
           <div>Play</div>
-          <div className="w-[1.5em]">
+          <div className="w-[1.5em] lg:w-[.8em]">
             <svg
               viewBox="0 0 86 86"
               fill="none"
@@ -48,7 +48,7 @@ const PlayReel = () => {
           </div>
           <div>Reel</div>
         </h1>
-        <p className="text-center leading-none text-sm">
+        <p className="text-center leading-none text-sm lg:text-lg lg:w-[25%]">
           Our work is best experienced in motion. Don’t forget to put on your
           headphones.
         </p>

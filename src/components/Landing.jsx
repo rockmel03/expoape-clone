@@ -6,12 +6,12 @@ const Landing = () => {
       <div className="w-full h-full">
         <img
           className="w-full h-full object-cover"
-          src="https://a.storyblok.com/f/133769/1920x2716/5c24d6b467/exo-ape-hero-1.jpg/m/1280x1811/filters:format(jpeg):quality(70)"
+          src="https://a.storyblok.com/f/133769/1920x2716/5c24d6b467/exo-ape-hero-1.jpg/m/1920x2716/filters:format(webp):quality(70)"
           alt=""
         />
       </div>
       <div className="absolute top-0 w-full h-full px-5 md:px-[7vw]">
-        <div className="mt-64 md:mt-[70vh]">
+        <div className="h-[50vh] md:h-[90vh] flex flex-col justify-end">
           <p className="font-light text-md leading-[1.3] md:leading-[1.2] md:text-3xl">
             Global digital design studio partnering
           </p>
