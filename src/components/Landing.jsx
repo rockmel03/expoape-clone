@@ -2,7 +2,7 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <section className="relative max-w-screen-2xl mx-auto w-full h-[200vh] md:h-[250vh]">
+    <section className="relative max-w-screen-2xl mx-auto w-full h-[150vh] md:h-[250vh]">
       <div className="w-full h-full">
         <img
           className="w-full h-full object-cover"
@@ -12,39 +12,39 @@ const Landing = () => {
       </div>
       <div className="absolute top-0 w-full h-full px-5 md:px-[7vw]">
         <div className="mt-64 md:mt-[70vh]">
-          <p className="font-base text-md leading-[1.3] md:leading-[1] md:text-3xl md:font-medium">
+          <p className="font-light text-md leading-[1.3] md:leading-[1.2] md:text-3xl">
             Global digital design studio partnering
           </p>
-          <p className="font-base text-md leading-[1.3] md:leading-[1] md:text-3xl md:font-medium">
+          <p className="font-light text-md leading-[1.3] md:leading-[1.2] md:text-3xl">
             with brands and businesses that create
           </p>
-          <p className="font-base text-md leading-[1.3] md:leading-[1] md:text-3xl md:font-medium">
+          <p className="font-light text-md leading-[1.3] md:leading-[1.2] md:text-3xl">
             exceptional experiences where people
           </p>
-          <p className="font-base text-md leading-[1.3] md:leading-[1] md:text-3xl md:font-medium">
+          <p className="font-light text-md leading-[1.3] md:leading-[1.2] md:text-3xl">
             {" "}
             live, work, and unwind.{" "}
           </p>
         </div>
         <div className="heading mt-5  mb-20  md:my-20">
           <div>
-            <h1 className="text-5xl tracking-tighter leading-[1] font-medium capitalize md:text-[16vw] md:font-light">
+            <h1 className="text-[3.5rem] tracking-tighter leading-[1] font-light capitalize md:text-[17vw] md:leading-[0.9] md:tracking-tight ">
               digital
             </h1>
           </div>
           <div>
-            <h1 className="text-5xl tracking-tighter leading-[1] font-medium capitalize md:text-[16vw] md:font-light">
+            <h1 className="text-[3.5rem] tracking-tighter leading-[1] font-light capitalize md:text-[17vw] md:leading-[0.9] md:tracking-tight ">
               design
             </h1>
           </div>
           <div>
-            <h1 className="text-5xl tracking-tighter leading-[1] font-medium capitalize md:text-[16vw] md:font-light">
+            <h1 className="text-[3.5rem] tracking-tighter leading-[1] font-light capitalize md:text-[17vw] md:leading-[0.9] md:tracking-tight ">
               experience
             </h1>
           </div>
         </div>
         <div className="mb-5">
-          <p className="font-base text-md leading-[1.3] md:leading-[1] md:text-3xl md:font-medium md:w-[40%]">
+          <p className="font-light text-md leading-[1.3] md:leading-[1.2] md:text-3xl md:w-[40%]">
             We help experience-driven companies thrive by making their audience
             feel the refined intricacies of their brand and product in the
             digital space. Unforgettable journeys start with a click.
