@@ -78,7 +78,7 @@ const Work = () => {
             <h2 className="capitalize font-light text-[3.5rem] sm:hidden leading-none my-5">
               Work
             </h2>
-            <p className="leading-1 text-base sm:text-lg mf:text-xl lg:text-2xl font-light opacity-80">
+            <p className="leading-1 text-base sm:text-md lg:text-2xl font-light opacity-80">
               Highlights of cases that we passionately built with
               forward-thinking clients and friends over the years.
             </p>

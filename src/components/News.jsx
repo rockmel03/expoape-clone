@@ -52,10 +52,10 @@ const News = () => {
   return (
     <section id="news" className="overflow-hidden  relative z-10">
       <div className="w-full max-w-screen-2xl mx-auto min-h-screen pb-20 sm:pt-10 bg-white text-black ">
-        <div className="relative w-full min-h-[65vh] lg:min-h-screen   flex items-center justify-center">
+        <div className="relative w-full min-h-[65vh] sm:min-h-[80vh] lg:min-h-screen   flex items-center justify-center">
           <div
             id="news__img--center"
-            className=" w-[35%] lg:w-[25%] aspect-[9/16] bg-red-500 overflow-hidden"
+            className=" w-[35%] md:w-[25%] aspect-[9/16] bg-red-500 overflow-hidden"
           >
             <img
               className="w-full h-full object-cover scale-110"
@@ -65,7 +65,7 @@ const News = () => {
           </div>
           <div
             id="news__img--top-left"
-            className=" w-[35%] lg:w-[25%] aspect-video bg-red-400 absolute z-[2] top-[40%] left-[3%] lg:top-[20%] lg:left-[15%] overflow-hidden"
+            className=" w-[35%] md:w-[25%] aspect-video bg-red-400 absolute z-[2] top-[40%] left-[3%] sm:top-[15%] md:top-[20%] md:left-[15%] overflow-hidden"
           >
             <video
               className="w-full h-full object-cover scale-110"
@@ -77,7 +77,7 @@ const News = () => {
           </div>
           <div
             id="news__img--top-right"
-            className=" w-[20%] lg:w-[10%] aspect-[4/5] bg-red-300 absolute z-[2] top-[30%] right-[15%]  lg:top-[15%] lg:right-[30%] overflow-hidden"
+            className=" w-[20%] md:w-[10%] aspect-[4/5] bg-red-300 absolute z-[2] top-[30%] right-[15%] sm:top-[10%]  md:top-[15%] md:right-[30%] overflow-hidden"
           >
             <img
               className="w-full h-full object-cover scale-110"
@@ -87,7 +87,7 @@ const News = () => {
           </div>
           <div
             id="news__img--bottom-left"
-            className=" w-[30%] lg:w-[25%] aspect-[7/6] bg-red-200 absolute z-[2] bottom-[10%] left-0 lg:bottom-[-15%] lg:left-[8%] overflow-hidden"
+            className=" w-[30%] md:w-[25%] aspect-[7/6] bg-red-200 absolute z-[2] bottom-[10%] left-0 sm:bottom-3 md:bottom-[-15%] sm:left-[12%] md:left-[8%] overflow-hidden"
           >
             <img
               className="w-full h-full object-cover scale-110"
@@ -97,7 +97,7 @@ const News = () => {
           </div>
           <div
             id="news__img--bottom-right"
-            className=" w-[30%] lg:w-[20%] aspect-[4/5] bg-red-600 absolute z-[2] bottom-[5%] right-0  lg:bottom-[-15%] lg:right-[8%] overflow-hidden"
+            className=" w-[30%] md:w-[20%] aspect-[4/5] bg-red-600 absolute z-[2] bottom-[5%] right-0 sm:bottom-0  md:bottom-[-15%] sm:right-[10%] md:right-[8%] overflow-hidden"
           >
             <video
               className="w-full h-full object-cover scale-110"
@@ -109,7 +109,7 @@ const News = () => {
           </div>
         </div>
         <div className="__text text-center px-10 ">
-          <h2 className="text-sm lg:text-xl flex gap-2 items-center justify-center mt-5">
+          <h2 className="text-sm md:text-xl flex gap-2 items-center justify-center mt-5">
             <div className="w-[1em]">
               <svg
                 viewBox="0 0 12 12"
@@ -125,7 +125,7 @@ const News = () => {
             </div>
             <span className="opacity-80">Work in motion</span>
           </h2>
-          <h1 className="text-6xl lg:text-[8rem] font-light my-10">
+          <h1 className="text-6xl md:text-[8rem] font-light my-10">
             {["Spread", "the News"].map((item, idx) => {
               return (
                 <div key={idx} className="h-fit text-center overflow-hidden">
@@ -146,7 +146,7 @@ const News = () => {
               );
             })}
           </h1>
-          <p className="leading-1 text-base lg:text-xl lg:w-[40%] mx-auto font-light opacity-80 my-5 ">
+          <p className="leading-1 text-base md:text-xl md:w-[40%] mx-auto font-light opacity-80 my-5 ">
             Highlights of cases that we passionately built with forward-thinking
             clients and friends over the years.
           </p>

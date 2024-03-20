@@ -21,7 +21,7 @@ const PlayReel = () => {
     tl.to(
       "#play-reel__video-center",
       {
-        scale: 4,
+        scale: 5.5,
         ease: "linear",
       },
       "a"
@@ -55,9 +55,23 @@ const PlayReel = () => {
   return (
     <section
       id="pin__play-reel"
-      className="bg-black text-white w-full overflow-hidden"
+      className="bg-black text-white w-full relative overflow-hidden"
     >
-      <div className="relative w-full max-w-screen-2xl h-screen mx-auto flex flex-col items-center justify-between py-[10vh] lg:py-10">
+      {/* video here ---- */}
+      <div
+        id="play-reel__video-center"
+        className=" w-32 lg:w-80 aspect-video sm:aspect-[10/16] md:aspect-video absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-zinc-500/20"
+      >
+        <video
+          src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"
+          className="w-full h-full object-cover origin-center"
+          autoPlay
+          muted
+          loop
+        ></video>
+      </div>
+
+      <div className="relative w-full max-w-screen-2xl h-screen mx-auto flex flex-col items-center justify-between py-[10vh] lg:py-10 bg-zinc-900/30">
         <h2 className="text-sm lg:text-lg flex gap-2 items-center">
           <div className="w-[1em]">
             <svg
@@ -74,19 +88,8 @@ const PlayReel = () => {
           </div>
           <span className="opacity-80">Work in motion</span>
         </h2>
-        <div
-          id="play-reel__video-center"
-          className=" w-32 lg:w-80 aspect-video absolute z-[10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-zinc-500/20"
-        >
-          <video
-            src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"
-            className="w-full h-full object-cover origin-center"
-            autoPlay
-            muted
-            loop
-          ></video>
-        </div>
-        <h1 className="relative z-20 font-light text-5xl lg:text-[10rem] flex gap-3 items-center justify-center">
+
+        <h1 className="relative z-20 font-light text-5xl lg:text-[10rem] flex gap-3 sm:gap-5 lg:gap-10 items-center justify-center">
           <div id="play-reel__play">Play</div>
           <div
             id="play-reel__playBtn"
