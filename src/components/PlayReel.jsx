@@ -1,8 +1,62 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap, { Power4 } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React, { useRef } from "react";
 
 const PlayReel = () => {
+  const videoDiv = useRef();
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        top: "0 0",
+        trigger: "#pin__play-reel",
+        pin: true,
+        scrub: 1,
+        // markers: true,
+      },
+    });
+
+    tl.to(
+      "#play-reel__video-center",
+      {
+        scale: 4,
+        ease: "linear",
+      },
+      "a"
+    );
+    tl.from(
+      "#play-reel__play",
+      {
+        x: "-100%",
+        ease: "linear",
+      },
+      "a"
+    );
+    tl.from(
+      "#play-reel__reel",
+      {
+        x: "100%",
+        ease: "linear",
+      },
+      "a"
+    );
+    tl.from(
+      "#play-reel__playBtn",
+      {
+        opacity: 0,
+        ease: "linear",
+      },
+      "a"
+    );
+  });
+
   return (
-    <section className="bg-black text-white w-full">
+    <section
+      id="pin__play-reel"
+      className="bg-black text-white w-full overflow-hidden"
+    >
       <div className="relative w-full max-w-screen-2xl h-screen mx-auto flex flex-col items-center justify-between py-[10vh] lg:py-10">
         <h2 className="text-sm lg:text-lg flex gap-2 items-center">
           <div className="w-[1em]">
@@ -20,21 +74,29 @@ const PlayReel = () => {
           </div>
           <span className="opacity-80">Work in motion</span>
         </h2>
-        <div className=" w-32 lg:w-80 aspect-video absolute z-[10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-zinc-500/20">
-          <img
-            src=""
-            alt=""
+        <div
+          id="play-reel__video-center"
+          className=" w-32 lg:w-80 aspect-video absolute z-[10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden bg-zinc-500/20"
+        >
+          <video
+            src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"
             className="w-full h-full object-cover origin-center"
-          />
+            autoPlay
+            muted
+            loop
+          ></video>
         </div>
-        <h1 className="relative z-20 font-light text-5xl lg:text-[10rem] flex gap-1 items-center justify-center">
-          <div>Play</div>
-          <div className="w-[1.5em] lg:w-[.8em]">
+        <h1 className="relative z-20 font-light text-5xl lg:text-[10rem] flex gap-3 items-center justify-center">
+          <div id="play-reel__play">Play</div>
+          <div
+            id="play-reel__playBtn"
+            className="w-[1.5em] lg:w-[.8em] sm:hidden"
+          >
             <svg
               viewBox="0 0 86 86"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              classNane="icon"
+              className="icon"
             >
               <circle
                 opacity="0.4"
@@ -46,7 +108,7 @@ const PlayReel = () => {
               <path d="M41 38V48L49.1818 43L41 38Z" fill="currentColor"></path>
             </svg>
           </div>
-          <div>Reel</div>
+          <div id="play-reel__reel">Reel</div>
         </h1>
         <p className="text-center leading-none text-sm lg:text-lg lg:w-[25%]">
           Our work is best experienced in motion. Don’t forget to put on your

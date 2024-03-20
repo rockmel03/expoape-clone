@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const Work = () => {
@@ -40,9 +41,23 @@ const Work = () => {
     <section className="bg-white text-black min-h-screen py-20 px-6 md:px-[10vw]">
       <div className=" max-w-screen-2xl mx-auto ">
         <div className="Work__text sm:flex w-full gap-1">
-          <h1 className="capitalize font-light sm:text-[8rem] md:text-[10rem] lg:text-[12rem] 2xl:text-[16rem] basis-4/5 hidden sm:block leading-none my-5 mx-[5vw]">
-            Work
-          </h1>
+          <div className="basis-4/5 hidden sm:block  my-5 mx-[5vw] overflow-hidden">
+            <h1 className="capitalize leading-none font-light sm:text-[8rem] md:text-[10rem] lg:text-[12rem] 2xl:text-[16rem]">
+              <motion.span
+                className="inline-block h-fit w-fit"
+                initial={{ y: "100%", rotate: 20, opacity: 0 }}
+                whileInView={{ y: 0, rotate: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.65,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: 0.1,
+                }}
+                viewport={{ once: true }}
+              >
+                work
+              </motion.span>
+            </h1>
+          </div>
           <div className="basis-2/5 sm:flex sm:flex-col gap-3 justify-center sm:translate-y-[70%]">
             <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl flex gap-2 items-center capitalize">
               <div className="w-[1em]">
@@ -74,12 +89,16 @@ const Work = () => {
         <div className="my-5 flex flex-col gap-5 sm:grid sm:grid-cols-12 sm:gap-y-[11vw]">
           {projects.map((item, idx) => (
             <div
+              data-scroll
+              data-scroll-speed={
+                window.innerWidth > 786 && idx % 2 == 0 ? "-.1" : "0"
+              }
               key={idx}
-              className={`group sm:self-end ${
-                idx === 0 && "col-start-2 col-end-8"
-              } ${idx === 1 && "col-start-9 col-end-13"} ${
-                idx === 2 && "col-start-2 col-end-5"
-              } ${idx === 3 && "col-start-6 col-end-11"}`}
+              className={`group sm:self-end 
+              ${idx === 0 && "col-start-2 col-end-8"} 
+              ${idx === 1 && "col-start-9 col-end-13"} 
+              ${idx === 2 && "col-start-2 col-end-5"} 
+              ${idx === 3 && "col-start-6 col-end-11"}`}
             >
               <a href="/">
                 <div className="relative w-full aspect-[3/4] sm:aspect-[8/9] overflow-hidden bg-zinc-100 ">
@@ -94,11 +113,11 @@ const Work = () => {
                   <img
                     src={item.image}
                     alt=""
-                    className="absolute top-0 left-0 w-full h-full object-cover object-center hidden sm:block group-hover:hidden duration-300"
+                    className="absolute top-0 left-0 w-full h-full object-cover object-center group-hover:opacity-1 hidden sm:block group-hover:opacity-0 duration-300"
                     loading="lazy"
                   />
                 </div>
-                <p className="flex flex-col py-2 leading-none text-sm">
+                <p className="flex flex-col py-2 leading-none text-sm sm:text-[1vw] sm:opacity-0 group-hover:opacity-100 duration-300">
                   <strong>{item.heading}</strong>
                   <span className="opacity-80">{item.subheading}</span>
                 </p>

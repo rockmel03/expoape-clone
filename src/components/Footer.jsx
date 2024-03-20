@@ -2,7 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#070707] text-white overflow-hidden">
+    <footer
+      data-scroll
+      data-scroll-speed="-.5"
+      className="w-full bg-[#070707] text-[#E0CCBB] overflow-hidden relative z-0"
+    >
       <div className="relative w-full max-w-screen-2xl min-h-[80vh] lg:min-h-screen mx-auto flex items-center justify-center">
         <div className="absolute w-[80vw] -top-10 -right-10 aspect-square overflow-hidden lg:top-[-60%] lg:right-[-10%]">
           <video
@@ -23,6 +27,18 @@ const Footer = () => {
             curiosity.
           </p>
           <hr className=" col-start-1 col-end-11 my-5" />
+          <ul className=" hidden lg:block text-lg lg:text-xl lg:col-start-1 lg:col-end-4">
+            {[
+              "Willem II Singel 8",
+              "6041 HS, Roermond",
+              "The Netherlands",
+              "hello@exoape.com",
+            ].map((item, i) => (
+              <li key={i} className="capitalize">
+                {item}
+              </li>
+            ))}
+          </ul>
           <ul className=" font-light text-lg lg:text-xl col-start-1 lg:col-start-4 col-end-5 lg:col-end-5">
             {["work", "studio", "news", "contact"].map((item, i) => (
               <li key={i} className="capitalize">
